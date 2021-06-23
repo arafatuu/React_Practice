@@ -75,37 +75,50 @@ import ReactDOM from 'react-dom';
 // )
 
 
-//05. JSX represents Objects
+// //05. JSX represents Objects
 
-   //method 01
+//    //method 01
 
-   const element1 = (
-     <h1 className="ok">
-         Hello Baby....! Whassuphhh.....I am from Ok
-     </h1>
-   );
+//    const element1 = (
+//      <h1 className="ok">
+//          Hello Baby....! Whassuphhh.....I am from Ok
+//      </h1>
+//    );
    
 
-   //Method 02:
+//    //Method 02:
 
-   const element2 = React.createElement(
-       'h1',
-       {className: 'okok'},
-       'Hello babby,,, I am from okok'
+//    const element2 = React.createElement(
+//        'h1',
+//        {className: 'okok'},
+//        'Hello babby,,, I am from okok'
 
-   );
-
-
-   //method 03:
-
-   const element3 = {
-       type: 'h1',
-       props: {
-           className: 'OKOKOK',
-           children: 'Babyyy..... I am from OKOKOK'
-       }
-   }
+//    );
 
 
-   ReactDOM.render(element1,document.getElementById('root'));
+//    //method 03:
+
+//    const element3 = {
+//        type: 'h1',
+//        props: {
+//            className: 'OKOKOK',
+//            children: 'Babyyy..... I am from OKOKOK'
+//        }
+//    }
+
+
+//    ReactDOM.render(element1,document.getElementById('root'));
+
+//06. Rendering Elemet
+function tick() {
+    const element = (
+      <div>
+        <h1>Hello, Bangladesh!</h1>
+        <h2>It is {new Date().toLocaleTimeString()}.</h2>
+      </div>
+    );
+    ReactDOM.render(element, document.getElementById('root'));
+  }
+  
+  setInterval(tick, 1000);
    
