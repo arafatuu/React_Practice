@@ -77,13 +77,13 @@ import ReactDOM from 'react-dom';
 
 // //05. JSX represents Objects
 
-//    //method 01
+  //  //method 01
 
-//    const element1 = (
-//      <h1 className="ok">
-//          Hello Baby....! Whassuphhh.....I am from Ok
-//      </h1>
-//    );
+  //  const element1 = (
+  //    <h1 className="ok">
+  //        Hello Baby....! Whassuphhh.....I am from Ok
+  //    </h1>
+  //  );
    
 
 //    //Method 02:
@@ -107,18 +107,77 @@ import ReactDOM from 'react-dom';
 //    }
 
 
-//    ReactDOM.render(element1,document.getElementById('root'));
+    //ReactDOM.render(element1,document.getElementById('root'));
 
-//06. Rendering Elemet
-function tick() {
-    const element = (
+// //06. Rendering Elemet
+// function tick() {
+//     const element = (
+//       <div>
+//         <h1>Hello, Bangladesh!</h1>
+//         <h2>It is {new Date().toLocaleTimeString()}.</h2>
+//       </div>
+//     );
+//     ReactDOM.render(element, document.getElementById('root'));
+//   }
+  
+//   setInterval(tick, 1000);
+
+
+// // Component
+// //01. FUNCTIONAL COMPONENT
+
+// function Clock({locale})
+// {
+//   return (
+//     <div>
+//       <h1>Hello, Bangladesh!</h1>
+//       <h2>It is {new Date().toLocaleTimeString(locale)}.</h2>
+//     </div>
+//   );
+// }
+//       ReactDOM.render(<Clock locale="bn-BD"/>, document.getElementById('root'));
+    
+ 
+
+
+// // // 02. Class Component -01
+
+
+// class Clock{
+//   print()
+//   {
+//     return (
+//       <div>
+//         <h1>Hello, Bangladesh!</h1>
+//         <h2>It is {new Date().toLocaleTimeString()}.</h2>
+//       </div>
+//     );
+//   }
+// }
+
+
+// const clockObj = new Clock();
+// ReactDOM.render(clockObj.print(), document.getElementById('root'));
+
+
+
+
+// // 02. Class Component -02
+
+
+class Clock extends React.Component{
+  render()
+  {
+    return (
       <div>
         <h1>Hello, Bangladesh!</h1>
-        <h2>It is {new Date().toLocaleTimeString()}.</h2>
+        <h2>It is {new Date().toLocaleTimeString(this.props.locale)}.</h2>
       </div>
     );
-    ReactDOM.render(element, document.getElementById('root'));
   }
-  
-  setInterval(tick, 1000);
-   
+}
+
+
+ReactDOM.render(<Clock locale = "bn-BD"/>, document.getElementById('root'));
+
+
